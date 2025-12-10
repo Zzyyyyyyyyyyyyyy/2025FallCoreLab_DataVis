@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World GDP Trends (2015-2024)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>World GDP Trends (2015-2024)</h1>
+    <p class="subtitle">GDP in Trillion USD - Click countries to compare</p>
+
+    <div class="country-selector">
+      <label class="country-chip selected" data-country="USA">
+        <span class="color-dot" style="background: #1f77b4"></span>USA
+      </label>
+      <label class="country-chip selected" data-country="China">
+        <span class="color-dot" style="background: #ff7f0e"></span>China
+      </label>
+      <label class="country-chip" data-country="Japan">
+        <span class="color-dot" style="background: #2ca02c"></span>Japan
+      </label>
+      <label class="country-chip" data-country="Germany">
+        <span class="color-dot" style="background: #d62728"></span>Germany
+      </label>
+      <label class="country-chip" data-country="UK">
+        <span class="color-dot" style="background: #9467bd"></span>UK
+      </label>
+      <label class="country-chip" data-country="India">
+        <span class="color-dot" style="background: #8c564b"></span>India
+      </label>
+      <label class="country-chip" data-country="France">
+        <span class="color-dot" style="background: #e377c2"></span>France
+      </label>
+      <label class="country-chip" data-country="Brazil">
+        <span class="color-dot" style="background: #7f7f7f"></span>Brazil
+      </label>
+      <label class="country-chip" data-country="Canada">
+        <span class="color-dot" style="background: #bcbd22"></span>Canada
+      </label>
+      <label class="country-chip" data-country="Korea">
+        <span class="color-dot" style="background: #17becf"></span>Korea
+      </label>
+    </div>
+
+    <div class="mode-controls">
+      <button id="playBtn" class="mode-btn">
+        <span class="mode-icon">▶</span>
+        Play Timeline
+      </button>
+      <span id="yearDisplay" class="year-display hidden">2015</span>
+      <button id="compareModeBtn" class="mode-btn">
+        <span class="mode-icon">📊</span>
+        Compare Mode: OFF
+      </button>
+      <div id="baseYearControl" class="base-year-control hidden">
+        <label>Base Year:</label>
+        <select id="baseYearSelect">
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="gdpChart"></canvas>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
